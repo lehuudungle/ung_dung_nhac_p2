@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="U_ngdung_music" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" minimumValueImage="miniVolume.png" maximumValueImage="maxVolume.png" translatesAutoresizingMaskIntoConstraints="NO" id="cTi-6P-ebN">
+                                <rect key="frame" x="14" y="269" width="292" height="31"/>
+                                <color key="minimumTrackTintColor" red="0.3535697122897844" green="0.42340117691566137" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="thumbTintColor" red="0.93050881410256414" green="0.92986725227813483" blue="0.90764425264907589" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="sld_Volume:" destination="BYZ-38-t0r" eventType="valueChanged" id="aVo-FU-KrP"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rqR-8j-JKI">
+                                <rect key="frame" x="145" y="236" width="30" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="3Rc-v1-0Fj"/>
+                                    <constraint firstAttribute="height" constant="25" id="7eX-RK-lm6"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="play.png"/>
+                                <connections>
+                                    <action selector="action_Play:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ndv-4l-Qua"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cqz-MA-rM4">
+                                <rect key="frame" x="16" y="186" width="49" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YJo-Nt-wbg">
+                                <rect key="frame" x="246" y="186" width="47" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="6cU-Nr-116">
+                                <rect key="frame" x="101" y="177" width="118" height="31"/>
+                                <color key="minimumTrackTintColor" red="0.30499864999603182" green="0.35388831164617424" blue="0.93050881410256414" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="action_duration:" destination="BYZ-38-t0r" eventType="valueChanged" id="sYp-fG-sAz"/>
+                                </connections>
+                            </slider>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="g88-2b-amW">
+                                <rect key="frame" x="221" y="230" width="51" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="6aa-h5-YuQ"/>
+                                    <constraint firstAttribute="width" constant="50" id="oiH-sb-KjN"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="action_Repeat:" destination="BYZ-38-t0r" eventType="valueChanged" id="56g-5B-iyQ"/>
+                                </connections>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="cTi-6P-ebN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ATV-Il-0Ba"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="YJo-Nt-wbg" secondAttribute="trailing" constant="7" id="Ftb-4Q-hd4"/>
+                            <constraint firstItem="6cU-Nr-116" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HvZ-ca-qRi"/>
+                            <constraint firstItem="Cqz-MA-rM4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Ney-dU-hCR"/>
+                            <constraint firstItem="rqR-8j-JKI" firstAttribute="top" secondItem="6cU-Nr-116" secondAttribute="bottom" constant="8" id="Owg-31-NbJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="g88-2b-amW" secondAttribute="trailing" constant="30" id="Skh-tJ-oT1"/>
+                            <constraint firstItem="cTi-6P-ebN" firstAttribute="top" secondItem="rqR-8j-JKI" secondAttribute="bottom" constant="8" id="aLe-MT-l2f"/>
+                            <constraint firstItem="YJo-Nt-wbg" firstAttribute="leading" secondItem="6cU-Nr-116" secondAttribute="trailing" constant="8" id="boD-yH-JeS"/>
+                            <constraint firstItem="6cU-Nr-116" firstAttribute="leading" secondItem="Cqz-MA-rM4" secondAttribute="trailing" constant="8" id="dUc-NS-BSJ"/>
+                            <constraint firstItem="cTi-6P-ebN" firstAttribute="top" secondItem="g88-2b-amW" secondAttribute="bottom" constant="8" id="edU-vz-dqe"/>
+                            <constraint firstItem="rqR-8j-JKI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="f1I-Q7-APw"/>
+                            <constraint firstItem="cTi-6P-ebN" firstAttribute="top" secondItem="YJo-Nt-wbg" secondAttribute="bottom" constant="46" id="itu-zX-SEm"/>
+                            <constraint firstItem="cTi-6P-ebN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="jON-BL-yDQ"/>
+                            <constraint firstItem="cTi-6P-ebN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lZk-zR-m5d"/>
+                            <constraint firstItem="cTi-6P-ebN" firstAttribute="top" secondItem="Cqz-MA-rM4" secondAttribute="bottom" constant="46" id="wVO-fA-h4u"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="Btn_Play" destination="rqR-8j-JKI" id="ZHW-HF-rKL"/>
+                        <outlet property="Sld_Vol" destination="cTi-6P-ebN" id="o5L-e2-C68"/>
+                        <outlet property="lbl_TimeLeft" destination="Cqz-MA-rM4" id="7Gj-fH-jso"/>
+                        <outlet property="lbl_TimeTotal" destination="YJo-Nt-wbg" id="YdU-sJ-1eL"/>
+                        <outlet property="sld_Duration" destination="6cU-Nr-116" id="cLB-Am-CSA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="162" y="396"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="maxVolume.png" width="30" height="30"/>
+        <image name="miniVolume.png" width="30" height="30"/>
+        <image name="play.png" width="256" height="256"/>
+    </resources>
+</document>
